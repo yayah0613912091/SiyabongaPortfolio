@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Siyabonga Zulu | Portfolio</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <span>Web Application Developer</span>
+            </div>
+            <div class="links">
+                <a href="index.html" class="link">Home</a>
+                <a href="About.html" class="link">About</a>
+                <a href="Education.html" class="link">Education</a>
+                <a href="Abilities.html" class="link">Abilities</a>
+                <a href="Experience.html" class="link">Experience</a>
+                <a href="Contact.html" class="link">Contact</a>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <section>
+        <div class="main-container">
+            <div class="image">
+                <img src="myself.jpg" alt="Siyabonga Zulu Profile Picture">
+            </div>
+            <div class="content">
+                <h1>Hey, I'm <span>Siyabonga Zulu</span></h1>
+                <h2 class="typing text">
+                    Welcome to my personal portfolio. The aim of this web portfolio is to showcase my career skills, achievements, and work experience in a visually appealing and accessible format. Kindly use the navigation icons to explore, and feel free to reach out if you need any assistance. My contact details are available under the "Contact" section.
+                </h2>
+                <h2>I thank you!</h2>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://github.com/dashboard" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/siyabonga-zulu-9537001a3" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com/siyabonga_zulu" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <div class="btn">
+                    <a href="Siyabonga Zulu CV.pdf" download="Siyabonga Zulu CV"><button>Download CV</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.querySelector(".dropdown");
+            const isMenuOpen = navbar.style.transform === "translateY(0px)";
+            navbar.style.transform = isMenuOpen ? "translateY(-400px)" : "translateY(0px)";
+        }
+    </script>
+</body>
+</html>
