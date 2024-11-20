@@ -37,7 +37,7 @@ nav {
 }
 
 .logo {
-    color: #e75116;
+    color: #ffffff;
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -54,7 +54,7 @@ nav {
 }
 
 .links .link:hover {
-    color: #f55313;
+    color: #007a9a;
 }
 
 /* Main Section */
@@ -85,7 +85,7 @@ h1 {
 }
 
 h1 span {
-    color: #ff5733; /* Accent color for the name */
+    color: #007a9a; /* Accent color for the name */
 }
 
 h2 {
@@ -110,7 +110,7 @@ h2 {
 }
 
 .social-links a:hover {
-    color: #ff5733;
+    color: #007a9a;
 }
 
 .btn {
@@ -121,7 +121,7 @@ h2 {
 .btn button {
     padding: 0.8rem 2rem;
     font-size: 1.2rem;
-    background-color: #ff5733;
+    background-color: #007a9a;
     color: #fff;
     border: none;
     border-radius: 0.5rem;
@@ -130,7 +130,7 @@ h2 {
 }
 
 .btn button:hover {
-    background-color: #e74c3c;
+    background-color: #007a9a;
 }
 
 /* About Me Section */
@@ -173,7 +173,7 @@ h2 {
 }
 
 .about-content span {
-    color: #ff5733;
+    color: #007a9a;
 }
 
 .skills-list {
@@ -187,7 +187,7 @@ h2 {
 }
 
 .skills-list i {
-    color: #ff5733;
+    color: #007a9a;
     margin-right: 10px;
 }
 
@@ -205,7 +205,7 @@ h2 {
 }
 
 .social-links a:hover {
-    color: #ff5733;
+    color: #007a9a;
 }
 
 footer {
