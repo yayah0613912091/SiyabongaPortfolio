@@ -736,7 +736,7 @@ footer {
     margin: 0 0 10px;
     font-size: 20px;
     position: relative;
-    color: #000000;
+    color: #007a9a;
     display: inline-block;
 }
 
@@ -746,7 +746,7 @@ footer {
     display: block;
     width: 0;
     height: 3px;
-    background-color: #000000;
+    background-color: #007a9a;
     transition: width 0.3s ease;
     margin-top: 5px;
 }
@@ -765,10 +765,12 @@ footer {
     background-color: #afafaf;
     box-shadow: 0 8px 12px #333;
 }
+
 .education-section {
     padding: 50px 20px;
     text-align: center;
 }
+
 
 .education-section h1 {
     font-size: 36px;
@@ -784,7 +786,7 @@ footer {
 }
 
 .education-item {
-    background-color: #333;
+    background-color: #afafaf;
     color: white;
     padding: 20px;
     border-radius: 8px;
@@ -799,18 +801,18 @@ footer {
 .education-item h3 {
     margin: 0 0 10px;
     font-size: 20px;
-    color: #333;
+    color: #007a9a;
 }
 
 .education-item p {
     margin: 8px 0;
 }
 
-/* Hover Animation */
+/*Hover Animation */
 .education-item:hover {
     transform: scale(1.05);
-    background-color: #ffffff;
-    border: 2px solid #ffffff;
+    background-color: #afafaf;
+    border: 2px solid #afafaf; 
 }
 
 
