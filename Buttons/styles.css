@@ -815,6 +815,43 @@ footer {
     border: 2px solid #afafaf; 
 }
 
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+.dropdown {
+    display: none;
+    flex-direction: column;
+    background-color: #444;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.dropdown a {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+.dropdown a:hover {
+    background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .links {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .dropdown {
+        display: flex;
+    }
+}
 
 
 

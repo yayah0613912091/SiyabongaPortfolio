@@ -12,19 +12,29 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <div class="logo">
-                <span>Siyabonga Zulu</span>
-            </div>
-            <div class="links">
-                <a href="index.html" class="link">Home</a>
-                <a href="Buttons/About.html" class="link">About</a>
-                <a href="Buttons/Education.html" class="link">Education</a>
-                <a href="Buttons/Abilities.html" class="link">Abilities</a>
-                <a href="Buttons/Experience.html" class="link">Experience</a>
-                <a href="Buttons/Contact.html" class="link">Contact</a>
-            </div>
+        <div class="logo">
+            <span>Siyabonga Zulu</span>
         </div>
+        <div class="links">
+            <a href="index.html" class="link">Home</a>
+            <a href="Buttons/About.html" class="link">About</a>
+            <a href="Buttons/Education.html" class="link">Education</a>
+            <a href="Buttons/Abilities.html" class="link">Abilities</a>
+            <a href="Buttons/Experience.html" class="link">Experience</a>
+            <a href="Buttons/Contact.html" class="link">Contact</a>
         </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="dropdown" id="dropdownMenu">
+            <a href="index.html" class="link">Home</a>
+            <a href="About.html" class="link">About</a>
+            <a href="Education.html" class="link">Education</a>
+            <a href="Abilities.html" class="link">Abilities</a>
+            <a href="Experience.html" class="link">Experience</a>
+            <a href="Contact.html" class="link">Contact</a>
+        </div>
+    </div>
     </nav>
 
     <!-- Main Section -->
@@ -57,9 +67,11 @@
     </footer>
     <script>
         function toggleMenu() {
+            const dropdown = document.getElementById('dropdownMenu');
             const navbar = document.querySelector(".dropdown");
             const isMenuOpen = navbar.style.transform === "translateY(0px)";
             navbar.style.transform = isMenuOpen ? "translateY(-400px)" : "translateY(0px)";
+            dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
         }
     </script>
 </body>

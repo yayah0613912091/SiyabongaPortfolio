@@ -12,16 +12,27 @@
     <nav>
         <div class="nav-container">
             <div class="logo">
-                <span>Web Application Developer</span>
+                <span>Siyabonga Zulu</span>
             </div>
-            <div class="links">
-                <a href="index.html" class="link">Home</a>
-                <a href="About.html" class="link">About</a>
-                <a href="Education.html" class="link">Education</a>
-                <a href="Abilities.html" class="link">Abilities</a>
-                <a href="Experience.html" class="link">Experience</a>
-                <a href="Contact.html" class="link">Contact</a>
-            </div>
+        <div class="links">
+            <a href="index.html" class="link">Home</a>
+            <a href="About.html" class="link">About</a>
+            <a href="Education.html" class="link">Education</a>
+            <a href="Abilities.html" class="link">Abilities</a>
+            <a href="Experience.html" class="link">Experience</a>
+            <a href="Contact.html" class="link">Contact</a>
+        </div>
+    </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="dropdown" id="dropdownMenu">
+            <a href="index.html" class="link">Home</a>
+            <a href="About.html" class="link">About</a>
+            <a href="Education.html" class="link">Education</a>
+            <a href="Abilities.html" class="link">Abilities</a>
+            <a href="Experience.html" class="link">Experience</a>
+            <a href="Contact.html" class="link">Contact</a>
         </div>
     </nav>
 
@@ -50,6 +61,15 @@
     <footer>
         <p>© 2024 Siyabonga Zulu. All rights reserved.</p>
     </footer>
+    <script>
+        function toggleMenu() {
+            const dropdown = document.getElementById('dropdownMenu');
+            const navbar = document.querySelector(".dropdown");
+            const isMenuOpen = navbar.style.transform === "translateY(0px)";
+            navbar.style.transform = isMenuOpen ? "translateY(-400px)" : "translateY(0px)";
+            dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
     <script src="Javascript/script.js"></script>
 </body>
 </html>
