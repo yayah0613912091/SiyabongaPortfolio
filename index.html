@@ -12,20 +12,27 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-        <div class="logo">
-            <span>Siyabonga Zulu</span>
+            <div class="logo">
+                <span>Siyabonga Zulu</span>
+            </div>
+            <div class="links">
+                <a href="index.html" class="link">Home</a>
+                <a href="Buttons/About.html" class="link">About</a>
+                <a href="Buttons/Education.html" class="link">Education</a>
+                <a href="Buttons/Abilities.html" class="link">Abilities</a>
+                <a href="Buttons/Experience.html" class="link">Experience</a>
+                <a href="Buttons/Contact.html" class="link">Contact</a>
+            </div>
         </div>
-        <div class="links">
-            <a href="index.html" class="link">Home</a>
-            <a href="Buttons/About.html" class="link">About</a>
-            <a href="Buttons/Education.html" class="link">Education</a>
-            <a href="Buttons/Abilities.html" class="link">Abilities</a>
-            <a href="Buttons/Experience.html" class="link">Experience</a>
-            <a href="Buttons/Contact.html" class="link">Contact</a>
-        </div>
-        <div class="hamburger" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
-        </div>
+        <div class="menu-icons">
+            <div class="hamburger" id="hamburger-menu">
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="cancel" id="cancel-menu" style="display: none;">
+                <i class="fas fa-times"></i>
+                </div>
+            </div>
         <div class="dropdown" id="dropdownMenu">
             <a href="index.html" class="link">Home</a>
             <a href="About.html" class="link">About</a>
@@ -34,7 +41,6 @@
             <a href="Experience.html" class="link">Experience</a>
             <a href="Contact.html" class="link">Contact</a>
         </div>
-    </div>
     </nav>
 
     <!-- Main Section -->
@@ -57,22 +63,25 @@
                     <a href="https://twitter.com/siyabonga_zulu" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                 </div>
                 <div class="btn">
-                    <a href="Buttons/Siyabonga Zulu CV.pdf" download="Siyabonga Zulu CV"><button>Download CV</button></a>
+                    <a href="Siyabonga Zulu CV.pdf" download="Siyabonga Zulu CV"><button>Download CV</button></a>
                 </div>
             </div>
         </div>
     </section>
-    <footer>
-        <p>© 2024 Siyabonga Zulu. All rights reserved.</p>
+    <div class="chatbot-icon" id="chatbot-icon">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+    <!-- Chatbot Section -->
+    <div class="chatbot" id="chatbot" style="display: none;">
+        <div class="chatbot-header">Ask Me About Myself!</div>
+        <div class="chatbot-messages" id="chatbot-messages"></div>
+        <div class="chatbot-input">
+            <input type="text" id="chat-input" placeholder="Type your question here..." />
+            <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
     </footer>
-    <script>
-        function toggleMenu() {
-            const dropdown = document.getElementById('dropdownMenu');
-            const navbar = document.querySelector(".dropdown");
-            const isMenuOpen = navbar.style.transform === "translateY(0px)";
-            navbar.style.transform = isMenuOpen ? "translateY(-400px)" : "translateY(0px)";
-            dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
-        }
-    </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
