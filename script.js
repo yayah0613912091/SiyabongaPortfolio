@@ -58,3 +58,47 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburgerMenu = document.getElementById("hamburger-menu");
+    const cancelMenu = document.getElementById("cancel-menu");
+    const links = document.querySelector(".links");
+    const nav = document.querySelector("nav");
+
+    // Show menu when hamburger is clicked
+    hamburgerMenu?.addEventListener("click", () => {
+        links.style.display = "flex";
+        hamburgerMenu.style.display = "none";
+        cancelMenu.style.display = "block";
+    });
+
+    // Hide menu when cancel button is clicked
+    cancelMenu?.addEventListener("click", () => {
+        links.style.display = "none";
+        cancelMenu.style.display = "none";
+        hamburgerMenu.style.display = "block";
+    });
+
+    // Hide menu when clicking outside the nav
+    document.addEventListener("click", (event) => {
+        if (!nav.contains(event.target)) {
+            links.style.display = "none";
+            cancelMenu.style.display = "none";
+            hamburgerMenu.style.display = "block";
+        }
+    });
+
+    // Reset styles on screen resize
+    window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) {
+            links.style.display = "flex"; // Reset to desktop view
+            hamburgerMenu.style.display = "none";
+            cancelMenu.style.display = "none";
+        } else {
+            links.style.display = "none"; // Reset to mobile view
+            hamburgerMenu.style.display = "block";
+            cancelMenu.style.display = "none";
+        }
+    });
+});
+
