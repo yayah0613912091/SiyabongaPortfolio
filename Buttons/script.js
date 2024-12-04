@@ -59,46 +59,52 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-
 document.addEventListener("DOMContentLoaded", () => {
     const hamburgerMenu = document.getElementById("hamburger-menu");
     const cancelMenu = document.getElementById("cancel-menu");
     const links = document.querySelector(".links");
     const nav = document.querySelector("nav");
 
-    // Show menu when hamburger is clicked
-    hamburgerMenu?.addEventListener("click", () => {
+    // Show the menu
+    const showMenu = () => {
         links.style.display = "flex";
         hamburgerMenu.style.display = "none";
         cancelMenu.style.display = "block";
-    });
+    };
 
-    // Hide menu when cancel button is clicked
-    cancelMenu?.addEventListener("click", () => {
+    // Hide the menu
+    const hideMenu = () => {
         links.style.display = "none";
         cancelMenu.style.display = "none";
         hamburgerMenu.style.display = "block";
-    });
+    };
 
-    // Hide menu when clicking outside the nav
-    document.addEventListener("click", (event) => {
-        if (!nav.contains(event.target)) {
-            links.style.display = "none";
-            cancelMenu.style.display = "none";
-            hamburgerMenu.style.display = "block";
+    // Add click event listeners
+    hamburgerMenu.addEventListener("click", showMenu);
+    cancelMenu.addEventListener("click", hideMenu);
+
+    // Close menu when a link is clicked on mobile
+    links.addEventListener("click", (event) => {
+        if (event.target.tagName === "A" && window.innerWidth < 768) {
+            hideMenu();
         }
     });
 
-    // Reset styles on screen resize
+    // Close menu when clicking outside the navigation
+    document.addEventListener("click", (event) => {
+        if (!nav.contains(event.target)) {
+            hideMenu();
+        }
+    });
+
+    // Adjust menu on window resize
     window.addEventListener("resize", () => {
         if (window.innerWidth >= 768) {
-            links.style.display = "flex"; // Reset to desktop view
+            links.style.display = "flex"; // Keep menu open on larger screens
             hamburgerMenu.style.display = "none";
             cancelMenu.style.display = "none";
         } else {
-            links.style.display = "none"; // Reset to mobile view
-            hamburgerMenu.style.display = "block";
-            cancelMenu.style.display = "none";
+            hideMenu(); // Reset to hidden menu on smaller screens
         }
     });
 });
