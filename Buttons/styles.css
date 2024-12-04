@@ -37,13 +37,22 @@ nav {
 }
 
 .logo {
-    color: #007a9a;
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 20px; /* Adjust font size */
+   color: #fff; /* Text color */
+   text-decoration: none; /* Remove underline */
+   font-weight: bold;
+   margin: right 100px;
+   /*
+   color: #ffffff;
+   font-size: 1.5rem;
+   font-weight: bold;
+   */
 }
 
 .links {
-    display: flex;
+    display: none;
+    flex-direction: column;
+    transition: display 0.3s ease-in-out;
 }
 
 .links .link {
@@ -836,10 +845,25 @@ footer {
     background-color: #555;
 }
 
+/* Desktop view: Ensure links are always visible */
+@media (min-width: 768px) {
+    .links {
+        display: flex !important;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 768px) {
+    #hamburger-menu,
+    #cancel-menu {
+        display: none; /* Hide hamburger and cancel buttons on desktop */
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .links {
-        display: none;
+        display: block;
     }
     .hamburger {
         display: block;

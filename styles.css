@@ -37,14 +37,55 @@ nav {
 }
 
 .logo {
+     font-size: 20px; /* Adjust font size */
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    margin: right 100px;
+    /*
     color: #ffffff;
     font-size: 1.5rem;
     font-weight: bold;
+    */
 }
 
-.links {
+/*.links {
     display: flex;
+}*/
+/* Default styles for links container */
+.links {
+    display: none; /* Initially hidden for mobile */
+    flex-direction: column; /* Stack links on mobile */
+    transition: display 0.3s ease-in-out;
 }
+
+
+/* Desktop view: Ensure links are always visible */
+@media (min-width: 768px) {
+    .links {
+        display: flex !important;
+        flex-direction: row;
+    }
+}
+
+/* Hamburger and cancel button styles */
+#hamburger-menu {
+    display: block;
+    cursor: pointer;
+}
+
+#cancel-menu {
+    display: none;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    #hamburger-menu,
+    #cancel-menu {
+        display: none; /* Hide hamburger and cancel buttons on desktop */
+    }
+}
+
 
 .links .link {
     margin-left: 2rem;
