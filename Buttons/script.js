@@ -40,15 +40,14 @@ const chatbot = {
             inputField.value = '';
         }
     },
-
     generateResponse(message) {
         // Predefined responses
         const responses = {
-            "Name": "Hi! I'm Siyabonga Zulu, a passionate candidate who is dedicated to problem-solving situations.",
-            "profession": "I'm a versatile individual specializing in web development, created using HTML, CSS, and JavaScript.",
-            "location": "I'm from Johannesburg.",
-            "skills": "I excel in application lifecycle, software lifecycle, information systems management, data analysis, documentation, and computing fundamentals.",
-            "contact": "You can contact me through my LinkedIn or email found in the Contact section.",
+            "who are you": "Hi! I'm Siyabonga Zulu, a passionate candidate who is dedicated to problem-solving situations.",
+            "what is your profession": "I'm a versatile individual specializing in web development, created using HTML, CSS, and JavaScript.",
+            "where are you from": "I'm from Johannesburg.",
+            "what are your skills": "I excel in application lifecycle, software lifecycle, information systems management, data analysis, documentation, and computing fundamentals.",
+            "how can i contact you": "You can contact me through my LinkedIn or email found in the Contact section.",
             "github": "You can explore my projects on GitHub: <a href='https://github.com/' target='_blank'>https://github.com/</a>.",
             "projects": "I've worked on various projects. Would you like to know about my recent work?",
         };
@@ -63,7 +62,7 @@ const chatbot = {
         } else if (message.includes('projects')) {
             return responses['projects'];
         } else if (message.includes('education')) {
-            return responses['education'];
+            return responses['your education'];
         }
 
         // Exact match responses
