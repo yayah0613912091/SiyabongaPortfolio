@@ -36,10 +36,14 @@ nav {
     margin: 0 auto;
 }
 
+
 .logo {
-    color: #ffffff;
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 20px; /* Adjust font size */
+   color: #fff; /* Text color */
+   text-decoration: none; /* Remove underline */
+   font-weight: bold;
+ margin-right: 200px;
+
 }
 
 .links {
