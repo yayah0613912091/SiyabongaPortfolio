@@ -50,6 +50,8 @@ const chatbot = {
             "how can i contact you": "You can contact me through my LinkedIn or email found in the Contact section.",
             "github": "You can explore my projects on GitHub: <a href='https://github.com/' target='_blank'>https://github.com/</a>.",
             "projects": "I've worked on various projects. Would you like to know about my recent work?",
+            "education":"you can browse on the profile for my educational skills",
+            
         };
 
         // Keyword detection
@@ -62,7 +64,7 @@ const chatbot = {
         } else if (message.includes('projects')) {
             return responses['projects'];
         } else if (message.includes('education')) {
-            return responses['your education'];
+            return responses['education'];
         }
 
         // Exact match responses
