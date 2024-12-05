@@ -41,17 +41,10 @@ nav {
     color: #fff; /* Text color */
     text-decoration: none; /* Remove underline */
     font-weight: bold;
-    margin: right 100px;
-    /*
-    color: #ffffff;
-    font-size: 1.5rem;
-    font-weight: bold;
-    */
+  margin-right: 200px;
+
 }
 
-/*.links {
-    display: flex;
-}*/
 /* Default styles for links container */
 .links {
     display: none; /* Initially hidden for mobile */
